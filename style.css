@@ -1,0 +1,124 @@
+:root{
+  --red: hsl(1, 90%, 64%);
+  --blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --verylightgrayishblue: hsl(210, 60%, 98%);
+  --lightgrayishblue1: hsl(211, 68%, 94%);
+  --lightgrayishblue2: hsl(205, 33%, 90%);
+  --grayishblue: hsl(219, 14%, 63%);
+  --darkgrayishblue: hsl(219, 12%, 42%);
+  --verydarkblue: hsl(224, 21%, 14%);
+}
+body{
+  font-family: 'Inter', sans-serif;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
+  transition: ease-in .3s all;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  max-width: 700px;
+  margin: 3rem auto;
+  min-height: 100vh;
+  box-shadow: 1px 4px 72px -15px var(--grayishblue);
+  border-radius: .5rem;
+}
+.container main{
+  margin: 1rem auto;
+  padding: 2rem;
+}
+.container main .header{
+  display: flex;
+  justify-content: space-between;
+}
+.container main .header .heading{
+  font-weight: 800;
+
+}
+.container main .header .heading__s{
+  color: var(--grayishblue);
+}
+.container main .header .heading,
+.container main .header .heading__s {
+  cursor: pointer;
+}
+.container main .header .heading,
+.container main .header .heading__s:hover,
+#blue-hover:hover{
+  color: var(--blue);
+}
+.container main .header .heading span.count{
+  background: var(--blue);
+  padding: .2rem .6rem;
+  color: var(--white);
+  border-radius: .5rem;
+  margin-left: .5rem;
+}
+img{
+  width: 50px;
+}
+img.chess{
+  margin-left: auto;
+}
+.unread{
+  background: var(--verylightgrayishblue);
+  border-radius: .5rem;
+}
+.unread p:first-of-type::after{
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: var(--red);
+  border-radius: 50%;
+}
+.container main .message__section{
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+}
+.container main .message__section .message__item{
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.container main .message__section .message__item .message__card{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+strong, b {
+  cursor: pointer;
+}
+.message__section .message__content{
+  border: 1px solid var(--lightgrayishblue2);
+  padding: 1rem;
+  margin-left: 5rem;
+  border-radius: .5rem;
+  transition:  .3s ease-in background;
+  cursor: pointer;
+}
+.message__section .message__content:hover{
+  background: var(--lightgrayishblue1);
+}
+p.time{
+  color: var(--grayishblue);
+  margin-top: .3rem;
+}
+b.blue{
+  color: var(--blue);
+}
+
+@media screen and (max-width: 750px) {
+  .container{
+    width: 97%;
+    margin: auto;
+  }
+}
